@@ -27,6 +27,11 @@ GitHub confirmation shows authenticated login, exact destination, branch, visibi
 - A differing origin requires explicit consent and appears in preview. Origin changes only on confirmed push, never during selection or preview.
 - A preview ticket binds account, repository and local Git state. Invalid or changed state requires a fresh preview.
 - Push never uses force. Conflicts and incompatible histories remain errors to resolve explicitly.
+- A new destination branch is an explicit alternative after a rejected push. The user enters its name, reviews local source and remote destination branches, then confirms. The local branch stays unchanged; the server rejects a new-branch name that already exists.
+- A `NON_FAST_FORWARD` rejection explains that the remote history is ahead or different and offers branch selection. Retrying the same preview is not presented as synchronization. No automatic merge, history replacement, or change of the repository's default branch occurs.
+- After verified publication to a new branch, the user may explicitly choose to replace `main` files with that branch. A separate preview lists added, replaced and deleted files and any default-branch change. Exact typed owner/repository confirmation is required; no archive branch is created.
+- Main replacement preserves both histories in a merge commit whose tree exactly matches the published branch. It never force-updates a ref or removes old commits. Account, rights, visibility, default branch and both branch commits are rechecked; stale previews fail. The local branch is not changed by this remote operation.
+- Announce main replacement in the timeline only after the remote commit is verified. A partial default-branch failure reports that main files were already updated rather than claiming complete success.
 - Success requires verification of the remote commit. A local commit, configured origin, OAuth login, or preview is not a successful push.
 - Preserve inline failure feedback and offer Back to review a new preview; do not display a success event on failure.
 

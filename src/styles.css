@@ -10,3 +10,26 @@
 
 /* GitHub destination review uses the existing modal palette and control styles. */
 .github-modal{max-height:calc(100dvh - 32px);overflow-y:auto;scrollbar-gutter:stable;text-align:left}.github-modal .modal-icon,.github-modal h2{text-align:center}.github-modal .modal-input{margin-top:7px}.github-modal select.modal-input{font:inherit;color-scheme:dark;cursor:pointer}.github-modal .modal-summary b,.github-modal .modal-summary small{overflow-wrap:anywhere}.github-account{display:flex;align-items:center;justify-content:space-between;gap:12px}.github-account p{margin:0!important;text-align:left}.github-account .secondary-btn{flex-shrink:0}.github-mode{border:0;border-top:1px solid #37373f;padding:12px 0 0;margin:17px 0 0;display:flex;flex-wrap:wrap;gap:10px 18px;font-size:12px}.github-mode legend{padding:0 8px 0 0;color:#9f9fa9;font-size:11px}.github-mode label{display:flex;align-items:center;gap:6px;cursor:pointer}.github-modal .github-consent{justify-content:flex-start;align-items:flex-start;gap:10px;text-align:left;line-height:1.6}.github-consent input{flex-shrink:0;margin-top:4px}.github-modal input[type=checkbox],.github-modal input[type=radio]{accent-color:#c7ff4d;cursor:pointer}.github-modal button:focus-visible,.github-modal a:focus-visible,.github-modal input:focus-visible,.github-modal select:focus-visible{outline:2px solid #b18aff;outline-offset:3px}.github-modal button:disabled,.github-modal input:disabled,.github-modal select:disabled{opacity:.55;cursor:not-allowed}.github-modal .secondary-btn:hover:not(:disabled){background:#303039}.github-modal .primary-btn:hover:not(:disabled){filter:brightness(.92)}.github-modal .modal-actions{flex-wrap:wrap}.github-modal .publish-file-list{max-height:220px;overflow:auto}.github-modal .check-row{overflow-wrap:anywhere}.github-origin{border-color:#687548}@media(max-width:480px){.github-modal{width:100%;padding:22px 18px}.github-account{align-items:flex-start}.github-account .secondary-btn{font-size:11px;padding:8px}.github-modal .modal-actions button{flex:1}.github-mode{flex-direction:column}.github-modal .modal-help{text-align:left}}
+
+/* Preserve the console palette while giving GitHub failures a readable danger state. */
+.github-modal .modal-error{color:#ffaaaa;background:#3b2225;border:1px solid #a64d57;border-radius:7px;padding:11px 12px;margin-top:14px;line-height:1.6;font-size:12px;overflow-wrap:anywhere;text-align:left}
+.github-modal .modal-error span{margin-right:5px}
+.github-modal .github-error .secondary-btn{margin-top:10px}
+.github-modal .github-success span{color:#c7ff4d}
+.github-modal a{color:#c7ff4d;text-decoration:underline;text-underline-offset:3px;cursor:pointer}
+.github-modal a:hover{color:#e1ff9c}
+.github-modal .modal-actions button{min-width:118px}
+.github-modal button:active:not(:disabled){transform:translateY(1px)}
+.github-modal .modal-input[aria-invalid=true]{border-color:#a64d57}
+
+.github-modal .github-main-entry{display:grid;gap:12px}
+.github-modal .github-main-review{margin-top:22px;padding-top:18px;border-top:1px solid #45454f}
+.github-modal .github-main-review h3{font-size:15px;margin:0 0 10px}
+.github-modal .github-main-consequence{border:1px solid #a64d57}
+.github-modal .github-main-consequence>span{color:#ffaaaa}
+.github-modal .github-main-files{margin:14px 0}
+.github-modal .github-file-status{width:68px;flex:0 0 68px;font:10px 'DM Mono';color:#b18aff}
+.github-modal .github-file-deleted{color:#ffaaaa}
+.github-modal .github-file-added{color:#c7ff4d}
+.github-modal .github-replace-main{border:1px solid #a64d57;border-radius:7px;background:#3b2225;color:#ffcccc;font-size:12px;font-weight:600;padding:10px 14px;min-width:142px}
+.github-modal .github-replace-main:hover:not(:disabled){background:#552c32;border-color:#e4848e}
